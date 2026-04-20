@@ -10,4 +10,16 @@ document.getElementById("spnDisponible").innerText = "USD " + disponible.toFixed
  let capacidadPago = calcularCapacidadPago(disponible);
 
     document.getElementById("spnCapacidadPago").innerText = "USD " + capacidadPago.toFixed(2);
+
+    let monto = parseFloat(document.getElementById("txtMonto").value);
+    let plazoAnios = parseInt(document.getElementById("txtPlazo").value);
+    let tasa = parseFloat(document.getElementById("txtTasaInteres").value);
+
+    let interes = calcularInteresSimple(monto, tasa, plazoAnios);
+    document.getElementById("spnInteresPagar").innerText = "USD " + interes.toFixed(2);
+
+    let totalPagar = calcularTotalPagar(monto, interes);
+    document.getElementById("spnTotalPrestamo").innerText = "USD " + totalPagar.toFixed(2);
+    
+
 }
