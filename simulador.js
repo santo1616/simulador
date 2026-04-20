@@ -20,6 +20,7 @@ document.getElementById("spnDisponible").innerText = "USD " + disponible.toFixed
 
     let totalPagar = calcularTotalPagar(monto, interes);
     document.getElementById("spnTotalPrestamo").innerText = "USD " + totalPagar.toFixed(2);
-    
 
+    let cuotaMensual = calcularCuotaMensual(totalPagar, plazoAnios);
+    document.getElementById("spnCuotaMensual").innerText = "USD " + cuotaMensual.toFixed(2);
 }
