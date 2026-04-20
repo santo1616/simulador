@@ -1,13 +1,13 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 
-function calcular (){
-let ingresos = parseFloat(document.getElementById("txtIngresos").value);
-let egresos = parseFloat(document.getElementById("txtEgresos").value);
-let disponible = calcularDisponible(ingresos, egresos);
+function calcular() {
+    let ingresos = parseFloat(document.getElementById("txtIngresos").value);
+    let egresos = parseFloat(document.getElementById("txtEgresos").value);
+    let disponible = calcularDisponible(ingresos, egresos);
 
-document.getElementById("spnDisponible").innerText = "USD " + disponible.toFixed(2);
+    document.getElementById("spnDisponible").innerText = "USD " + disponible.toFixed(2);
 
- let capacidadPago = calcularCapacidadPago(disponible);
+    let capacidadPago = calcularCapacidadPago(disponible);
 
     document.getElementById("spnCapacidadPago").innerText = "USD " + capacidadPago.toFixed(2);
 
@@ -23,4 +23,12 @@ document.getElementById("spnDisponible").innerText = "USD " + disponible.toFixed
 
     let cuotaMensual = calcularCuotaMensual(totalPagar, plazoAnios);
     document.getElementById("spnCuotaMensual").innerText = "USD " + cuotaMensual.toFixed(2);
+
+    let estadoCredito = aprobarCredito(capacidadPago, cuotaMensual);
+
+    if (estadoCredito == true) {
+        document.getElementById("spnEstadoCredito").innerText = "CREDITO APROBADO";
+    } else {
+        document.getElementById("spnEstadoCredito").innerText = "CREDITO RECHAZADO";
+    }
 }
