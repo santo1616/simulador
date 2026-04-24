@@ -6,3 +6,62 @@ toma como referencia esta pagina web https://www.produbanco.com.ec/banca-persona
 
 
 ahi esta bien pero cambia los colores a otros colores que se vean mas serios que los cajones donde van los textos no sean tan feos utiliza sombras y detalles que den mas formalismo
+
+
+
+Necesito agregar validaciones a un formulario HTML sin modificar la estructura existente ni los IDs actuales. 
+Las validaciones deben ejecutarse al presionar un botón y deben mostrar mensajes de error debajo de cada campo.
+
+
+Valida que todos los campos del formulario sean obligatorios. 
+Si un campo está vacío, debe mostrarse un mensaje claro indicando que es obligatorio.
+
+
+Valida que los campos numéricos solo acepten números. 
+Si el usuario ingresa texto o caracteres no numéricos, debe mostrarse un mensaje de error.
+
+
+Aplica validaciones al campo INGRESOS:
+- Debe ser un número
+- No puede ser menor a 100
+- No puede ser mayor a 100000
+
+Aplica validaciones al campo EGRESOS:
+- Debe ser un número
+- No puede ser negativo
+- No puede ser mayor o igual a los ingresos
+
+
+Aplica validaciones al campo MONTO DEL CRÉDITO:
+- Debe ser un número
+- Mínimo 500
+- Máximo 50000
+
+
+Aplica validaciones al campo PLAZO:
+- Debe ser un número entero
+- No debe permitir decimales
+- Mínimo 1 año
+- Máximo 30 años
+
+
+Aplica validaciones al campo TASA DE INTERÉS:
+- Debe ser un número
+- Mínimo 1%
+- Máximo 50%
+
+Evita que el sistema realice cálculos si existen errores en el formulario.
+Si hay errores, debe mostrarse un mensaje general indicando que se deben corregir.
+
+
+PROMPT 10:
+Los mensajes de error deben mostrarse debajo de cada campo, sin usar alert().
+El diseño debe mantenerse limpio y profesional.
+
+
+No se deben usar librerías externas ni frameworks.
+El código debe ser únicamente HTML, CSS y JavaScript puro.
+
+
+No modificar nombres de variables, funciones ni IDs existentes.
+Mantener la lógica original del sistema y solo agregar validaciones.
